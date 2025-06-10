@@ -1,0 +1,145 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalPop 0.3s ease-out;
+}
+
+@keyframes modalPop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: #f0f0f0;
+  color: #ff4444;
+  transform: rotate(90deg);
+}
+
+.modal-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-content h2 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.cuisine-tag {
+  display: inline-block;
+  background: #ff4444;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.restaurant-details {
+  color: #333;
+}
+
+.restaurant-details h3 {
+  margin: 20px 0 15px;
+  color: #ff4444;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-items li {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.menu-items li:hover {
+  background: #f9f9f9;
+  transform: translateX(5px);
+}
+
+.item-name {
+  font-weight: bold;
+  color: #333;
+  display: block;
+}
+
+.item-price {
+  color: #ff4444;
+  font-weight: bold;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.item-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 5px 0 0;
+}
+
+.restaurant-info {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.restaurant-info p {
+  margin: 10px 0;
+  color: #333;
+}
+
+.restaurant-info strong {
+  color: #ff4444;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .modal-image {
+    height: 200px;
+  }
+} 
