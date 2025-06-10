@@ -1,4 +1,4 @@
-# Web Development Project 1 - *Software Engineering Learning Community *
+# Web Development Project 1 - Software Engineering Learning Community
 
 Submitted by: **Thy Tran**
 
