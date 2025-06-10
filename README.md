@@ -1,33 +1,40 @@
-# Web Development Project 1 - *Name of App Here*
+# Web Development Project 1 - *Software Engineering Learning Community *
 
-Submitted by: **Your Name Here**
+Submitted by: **Thy Tran**
 
-This web app: **insert description**
+This web app: **a comprehensive platform designed to help developers discover and engage with learning opportunities in their area. The app serves as a centralized hub for software engineering education where developers can browse, discover, and register for various learning opportunities including workshops, bootcamps, courses, conferences, study groups, and meetups.**
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **The app has a cohesive, unique theme for events or resources relevant to a specific community**
-  - [ ] Header/title describing the theme is displayed
-- [ ] **At least 10 unique events or resources are displayed in a responsive card format**
-  - [ ] There are at least 10 cards displayed 
-  - [ ] The cards should be displayed in an organized format (ex. a grid, or in one line)
-  - [ ] Each card should include some information about the event or resource
+- [x] **The app has a cohesive, unique theme for events or resources relevant to a specific community**
+- [x] Header/title describing the theme is displayed
+- [x] **At least 10 unique events or resources are displayed in a responsive card format**
+  - [x] There are at least 10 cards displayed 
+  - [x] The cards should be displayed in an organized format (ex. a grid, or in one line)
+  - [x] Each card should include some information about the event or resource
 
 
 The following **optional** features are implemented:
 
-- [ ] Buttons or links to a related resources are on each card component
-  - [ ] All cards have buttons or links in addition to text
-- [ ] The site is responsive for both desktop and mobile formats
-  - [ ] Web app is shown in a mobile format
+- [x] Buttons or links to a related resources are on each card component
+- [x] All cards have buttons or links in addition to text
+- [x] The site is responsive for both desktop and mobile formats
+- [x] Web app is shown in a mobile format
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [x] Toggle favorite status with visual state changes
+* [x] Google Maps integration for for physical locations, Google Calendar integration with event details
+* [x] Auto-detects email vs phone and opens appropriate app
+* [x] Four-tier responsive breakpoints:
+      1. Desktop (>1200px): 4 cards per row with full feature set
+      2. Large Tablet (901-1200px): 3 cards per row with adjusted spacing
+      3. Small Tablet (601-900px): 2 cards per row with modified layout
+      4. Mobile (<600px): Single column with stacked buttons and optimized sizing
 
 ## Video Walkthrough
 
@@ -48,7 +55,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Thy Tran made with ❤️]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

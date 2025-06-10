@@ -3,295 +3,305 @@ import './App.css'
 import Header from './components/Header'
 import Card from './components/Card'
 
-const foodTrucks = [
+const learningResources = [
   {
     id: 1,
-    name: 'Pho-nomenal',
-    cuisine: 'Vietnamese',
-    image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&q=80',
-    menuUrl: '#',
+    name: 'React Bootcamp 2024',
+    type: 'Workshop',
+    image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80',
+    websiteUrl: 'https://reactbootcamp2024.com',
     details: {
-      menuItems: [
+      description: 'Intensive 3-day React bootcamp covering hooks, state management, and modern development practices.',
+      schedule: 'March 15-17, 2024',
+      time: '9:00 AM - 5:00 PM',
+      location: 'Tech Hub Downtown, 123 Innovation Way',
+      instructor: 'Sarah Chen - Senior React Developer at Meta',
+      price: '$299',
+      topics: [
         {
-          name: 'Classic Pho',
-          price: 12.99,
-          description: 'Traditional Vietnamese noodle soup with beef broth, rice noodles, and your choice of meat'
+          name: 'React Fundamentals',
+          description: 'Components, JSX, props, and state management'
         },
         {
-          name: 'Banh Mi',
-          price: 8.99,
-          description: 'Vietnamese sandwich with pickled vegetables, cilantro, and choice of protein'
+          name: 'React Hooks',
+          description: 'useState, useEffect, useContext, and custom hooks'
         },
         {
-          name: 'Spring Rolls',
-          price: 6.99,
-          description: 'Fresh rice paper rolls with shrimp, pork, vegetables, and peanut dipping sauce'
+          name: 'State Management',
+          description: 'Redux, Context API, and Zustand implementation'
         }
       ],
-      hours: 'Mon-Sun: 11:00 AM - 9:00 PM',
-      location: '123 Food Truck Lane, Foodie City',
-      phone: '(555) 123-4567'
+      contact: '(555) 123-4567'
     }
   },
   {
     id: 2,
-    name: 'Seoul Food',
-    cuisine: 'Korean',
-    image: 'https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&q=80',
-    menuUrl: '#',
+    name: 'AI/ML Study Group',
+    type: 'Study Group',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80',
+    websiteUrl: 'https://aimlstudygroup.dev',
     details: {
-      menuItems: [
+      description: 'Weekly study sessions focused on machine learning algorithms and AI implementation using Python.',
+      schedule: 'Every Wednesday',
+      time: '7:00 PM - 9:00 PM',
+      location: 'Central Library - Room 205, 456 Knowledge Ave',
+      instructor: 'Dr. Michael Rodriguez - Data Science Professor',
+      price: 'Free',
+      topics: [
         {
-          name: 'Bulgogi Bowl',
-          price: 13.99,
-          description: 'Marinated beef with rice, vegetables, and signature sauce'
+          name: 'Machine Learning Basics',
+          description: 'Supervised and unsupervised learning fundamentals'
         },
         {
-          name: 'Kimchi Fried Rice',
-          price: 11.99,
-          description: 'Spicy fried rice with kimchi, vegetables, and egg'
+          name: 'Deep Learning',
+          description: 'Neural networks, TensorFlow, and PyTorch'
         },
         {
-          name: 'Korean Fried Chicken',
-          price: 12.99,
-          description: 'Crispy chicken with choice of soy garlic or spicy sauce'
+          name: 'AI Ethics',
+          description: 'Responsible AI development and bias prevention'
         }
       ],
-      hours: 'Tue-Sun: 11:30 AM - 8:30 PM',
-      location: '456 Street Food Ave, Foodie City',
-      phone: '(555) 234-5678'
+      contact: '(555) 234-5678'
     }
   },
   {
     id: 3,
-    name: 'Dim Sum Express',
-    cuisine: 'Chinese',
-    image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80',
-    menuUrl: '#',
+    name: 'JavaScript Mastery Course',
+    type: 'Online Course',
+    image: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&q=80',
+    websiteUrl: 'https://jsmastery.dev',
     details: {
-      menuItems: [
+      description: 'Comprehensive JavaScript course from beginner to advanced level with hands-on projects.',
+      schedule: 'Self-paced',
+      time: '40 hours of content',
+      location: 'Online Platform',
+      instructor: 'JavaScript Mastery Team',
+      price: '$149',
+      topics: [
         {
-          name: 'Har Gow',
-          price: 6.99,
-          description: 'Shrimp dumplings with bamboo shoots (4 pieces)'
+          name: 'ES6+ Features',
+          description: 'Arrow functions, destructuring, modules, and async/await'
         },
         {
-          name: 'Siu Mai',
-          price: 5.99,
-          description: 'Pork and shrimp dumplings (4 pieces)'
+          name: 'DOM Manipulation',
+          description: 'Interactive web development and event handling'
         },
         {
-          name: 'BBQ Pork Buns',
-          price: 5.99,
-          description: 'Steamed buns filled with char siu pork (3 pieces)'
+          name: 'APIs & Fetch',
+          description: 'Working with REST APIs and handling HTTP requests'
         }
       ],
-      hours: 'Wed-Mon: 10:00 AM - 8:00 PM',
-      location: '789 Dim Sum Road, Foodie City',
-      phone: '(555) 345-6789'
+      contact: 'support@jsmastery.dev'
     }
   },
   {
     id: 4,
-    name: 'Sushi Revolution',
-    cuisine: 'Japanese',
-    image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80',
-    menuUrl: '#',
+    name: 'DevOps Conference 2024',
+    type: 'Conference',
+    image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=80',
+    websiteUrl: 'https://devopsconf2024.tech',
     details: {
-      menuItems: [
+      description: 'Annual DevOps conference featuring industry leaders discussing CI/CD, containerization, and cloud technologies.',
+      schedule: 'June 20-22, 2024',
+      time: '8:00 AM - 6:00 PM',
+      location: 'Convention Center, 789 Tech Boulevard',
+      instructor: 'Multiple Industry Experts',
+      price: '$599 (Early Bird: $449)',
+      topics: [
         {
-          name: 'Dragon Roll',
-          price: 15.99,
-          description: 'Eel and cucumber topped with avocado and eel sauce'
+          name: 'Kubernetes & Docker',
+          description: 'Container orchestration and microservices architecture'
         },
         {
-          name: 'Spicy Tuna Roll',
-          price: 12.99,
-          description: 'Fresh tuna with spicy mayo and cucumber'
+          name: 'CI/CD Pipelines',
+          description: 'Automated testing, deployment, and monitoring'
         },
         {
-          name: 'Salmon Nigiri',
-          price: 8.99,
-          description: 'Fresh salmon over seasoned rice (2 pieces)'
+          name: 'Cloud Infrastructure',
+          description: 'AWS, Azure, and Google Cloud Platform best practices'
         }
       ],
-      hours: 'Mon-Sat: 11:30 AM - 9:30 PM',
-      location: '321 Sushi Street, Foodie City',
-      phone: '(555) 456-7890'
+      contact: '(555) 345-6789'
     }
   },
   {
     id: 5,
-    name: 'Thai Street Eats',
-    cuisine: 'Thai',
-    image: 'https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&q=80',
-    menuUrl: '#',
+    name: 'Python for Data Science',
+    type: 'Workshop',
+    image: 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&q=80',
+    websiteUrl: 'https://pythondatascience.learn',
     details: {
-      menuItems: [
+      description: 'Hands-on workshop covering Python libraries for data analysis, visualization, and machine learning.',
+      schedule: 'April 10, 2024',
+      time: '10:00 AM - 4:00 PM',
+      location: 'Data Science Institute, 321 Analytics Street',
+      instructor: 'Dr. Emily Watson - Senior Data Scientist',
+      price: '$199',
+      topics: [
         {
-          name: 'Pad Thai',
-          price: 11.99,
-          description: 'Rice noodles with tofu, shrimp, peanuts, and tamarind sauce'
+          name: 'Pandas & NumPy',
+          description: 'Data manipulation and numerical computing'
         },
         {
-          name: 'Green Curry',
-          price: 12.99,
-          description: 'Coconut curry with bamboo shoots, vegetables, and choice of protein'
+          name: 'Matplotlib & Seaborn',
+          description: 'Data visualization and statistical plotting'
         },
         {
-          name: 'Mango Sticky Rice',
-          price: 6.99,
-          description: 'Sweet sticky rice with fresh mango and coconut cream'
+          name: 'Scikit-learn',
+          description: 'Machine learning model implementation'
         }
       ],
-      hours: 'Tue-Sun: 11:00 AM - 9:00 PM',
-      location: '654 Thai Lane, Foodie City',
-      phone: '(555) 567-8901'
+      contact: '(555) 456-7890'
     }
   },
   {
     id: 6,
-    name: 'BBQ Boss',
-    cuisine: 'American BBQ',
-    image: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&q=80',
-    menuUrl: '#',
+    name: 'Web Development Bootcamp',
+    type: 'Bootcamp',
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80',
+    websiteUrl: 'https://webdevbootcamp.academy',
     details: {
-      menuItems: [
+      description: 'Intensive 12-week full-stack web development bootcamp covering HTML, CSS, JavaScript, React, and Node.js.',
+      schedule: 'February 5 - April 26, 2024',
+      time: 'Monday-Friday, 9:00 AM - 3:00 PM',
+      location: 'Code Academy Campus, 555 Developer Drive',
+      instructor: 'Full-Stack Development Team',
+      price: '$12,999 (Payment plans available)',
+      topics: [
         {
-          name: 'Brisket Plate',
-          price: 18.99,
-          description: 'Smoked brisket with two sides and cornbread'
+          name: 'Frontend Development',
+          description: 'HTML5, CSS3, JavaScript, React, and responsive design'
         },
         {
-          name: 'Pulled Pork Sandwich',
-          price: 12.99,
-          description: 'House-smoked pulled pork with coleslaw on brioche'
+          name: 'Backend Development',
+          description: 'Node.js, Express, databases, and API development'
         },
         {
-          name: 'Rack of Ribs',
-          price: 24.99,
-          description: 'Full rack of baby back ribs with BBQ sauce'
+          name: 'Full-Stack Projects',
+          description: 'Portfolio projects and team collaboration'
         }
       ],
-      hours: 'Wed-Sun: 11:00 AM - 8:00 PM',
-      location: '987 Smoke Ring Road, Foodie City',
-      phone: '(555) 678-9012'
+      contact: '(555) 567-8901'
     }
   },
   {
     id: 7,
-    name: 'Taco Tornado',
-    cuisine: 'Mexican-American',
-    image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80',
-    menuUrl: '#',
+    name: 'Cybersecurity Essentials',
+    type: 'Course',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80',
+    websiteUrl: 'https://cybersecurity-essentials.edu',
     details: {
-      menuItems: [
+      description: 'Essential cybersecurity concepts for developers including secure coding practices and threat prevention.',
+      schedule: 'May 8-10, 2024',
+      time: '6:00 PM - 9:00 PM',
+      location: 'Security Training Center, 888 Safe Street',
+      instructor: 'John Martinez - Cybersecurity Specialist',
+      price: '$399',
+      topics: [
         {
-          name: 'Street Tacos',
-          price: 9.99,
-          description: 'Three corn tortilla tacos with choice of meat, onions, and cilantro'
+          name: 'Secure Coding',
+          description: 'Prevention of common vulnerabilities and attacks'
         },
         {
-          name: 'Burrito Supreme',
-          price: 11.99,
-          description: 'Large burrito with rice, beans, meat, and all the fixings'
+          name: 'Network Security',
+          description: 'Firewalls, encryption, and secure protocols'
         },
         {
-          name: 'Quesadilla',
-          price: 10.99,
-          description: 'Large flour tortilla with cheese, meat, and vegetables'
+          name: 'Penetration Testing',
+          description: 'Ethical hacking and vulnerability assessment'
         }
       ],
-      hours: 'Mon-Sun: 10:30 AM - 10:00 PM',
-      location: '741 Taco Trail, Foodie City',
-      phone: '(555) 789-0123'
+      contact: '(555) 678-9012'
     }
   },
   {
     id: 8,
-    name: 'Burger Bliss',
-    cuisine: 'American',
-    image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80',
-    menuUrl: '#',
+    name: 'Mobile App Development',
+    type: 'Workshop',
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80',
+    websiteUrl: 'https://mobiledev-workshop.com',
     details: {
-      menuItems: [
+      description: 'Cross-platform mobile development using React Native and Flutter frameworks.',
+      schedule: 'March 28-29, 2024',
+      time: '9:00 AM - 5:00 PM',
+      location: 'Mobile Innovation Lab, 111 App Avenue',
+      instructor: 'Lisa Kim - Senior Mobile Developer',
+      price: '$449',
+      topics: [
         {
-          name: 'Classic Burger',
-          price: 10.99,
-          description: 'Beef patty with lettuce, tomato, onion, and special sauce'
+          name: 'React Native',
+          description: 'iOS and Android development with React Native'
         },
         {
-          name: 'Bacon Cheese Burger',
-          price: 12.99,
-          description: 'Classic burger with bacon and cheddar cheese'
+          name: 'Flutter Basics',
+          description: 'Google\'s UI toolkit for mobile development'
         },
         {
-          name: 'Veggie Burger',
-          price: 11.99,
-          description: 'House-made vegetable patty with avocado and sprouts'
+          name: 'App Store Deployment',
+          description: 'Publishing apps to Google Play and App Store'
         }
       ],
-      hours: 'Mon-Sun: 11:00 AM - 9:00 PM',
-      location: '852 Burger Boulevard, Foodie City',
-      phone: '(555) 890-1234'
+      contact: '(555) 789-0123'
     }
   },
   {
     id: 9,
-    name: 'Lobster Roll Express',
-    cuisine: 'American Seafood',
-    image: 'https://images.unsplash.com/photo-1559304822-9eb2813c9844?auto=format&fit=crop&q=80',
-    menuUrl: '#',
+    name: 'Database Design Masterclass',
+    type: 'Masterclass',
+    image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&q=80',
+    websiteUrl: 'https://database-masterclass.db',
     details: {
-      menuItems: [
+      description: 'Advanced database design principles covering SQL, NoSQL, and database optimization techniques.',
+      schedule: 'April 25, 2024',
+      time: '1:00 PM - 6:00 PM',
+      location: 'Database Institute, 777 Query Road',
+      instructor: 'David Thompson - Database Architect',
+      price: '$299',
+      topics: [
         {
-          name: 'Classic Lobster Roll',
-          price: 21.99,
-          description: 'Maine lobster with light mayo on a toasted roll'
+          name: 'SQL Optimization',
+          description: 'Query performance tuning and indexing strategies'
         },
         {
-          name: 'Crab Cake Sandwich',
-          price: 16.99,
-          description: 'Maryland-style crab cake with remoulade sauce'
+          name: 'NoSQL Databases',
+          description: 'MongoDB, Redis, and document-based storage'
         },
         {
-          name: 'Seafood Chowder',
-          price: 8.99,
-          description: 'Creamy New England style with lobster, clams, and fish'
+          name: 'Database Security',
+          description: 'Data protection and access control'
         }
       ],
-      hours: 'Thu-Tue: 11:30 AM - 8:00 PM',
-      location: '963 Seafood Square, Foodie City',
-      phone: '(555) 901-2345'
+      contact: '(555) 890-1234'
     }
   },
   {
     id: 10,
-    name: 'Banh Mi Brothers',
-    cuisine: 'Vietnamese',
-    image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&q=80',
-    menuUrl: '#',
+    name: 'Open Source Contribution',
+    type: 'Meetup',
+    image: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&q=80',
+    websiteUrl: 'https://opensource-meetup.org',
     details: {
-      menuItems: [
+      description: 'Monthly meetup for developers interested in contributing to open source projects and building their GitHub profile.',
+      schedule: 'First Friday of every month',
+      time: '6:30 PM - 8:30 PM',
+      location: 'Community Center, 999 Collaboration Circle',
+      instructor: 'Open Source Community Leaders',
+      price: 'Free',
+      topics: [
         {
-          name: 'Classic Banh Mi',
-          price: 8.99,
-          description: 'Traditional Vietnamese sandwich with pate, cold cuts, and pickled vegetables'
+          name: 'Git & GitHub',
+          description: 'Version control and collaborative development'
         },
         {
-          name: 'Grilled Pork Banh Mi',
-          price: 9.99,
-          description: 'Marinated grilled pork with traditional toppings'
+          name: 'Finding Projects',
+          description: 'How to discover and evaluate open source projects'
         },
         {
-          name: 'Lemongrass Tofu Banh Mi',
-          price: 8.99,
-          description: 'Vegetarian option with lemongrass-marinated tofu'
+          name: 'Making Contributions',
+          description: 'Pull requests, code reviews, and community guidelines'
         }
       ],
-      hours: 'Mon-Sat: 10:30 AM - 7:30 PM',
-      location: '159 Banh Mi Way, Foodie City',
-      phone: '(555) 012-3456'
+      contact: 'hello@opensource-meetup.org'
     }
   }
 ]
@@ -301,14 +311,14 @@ function App() {
     <div className="container">
       <Header />
       <main className="card-grid">
-        {foodTrucks.map((truck) => (
+        {learningResources.map((resource) => (
           <Card
-            key={truck.id}
-            name={truck.name}
-            cuisine={truck.cuisine}
-            image={truck.image}
-            menuUrl={truck.menuUrl}
-            details={truck.details}
+            key={resource.id}
+            name={resource.name}
+            type={resource.type}
+            image={resource.image}
+            websiteUrl={resource.websiteUrl}
+            details={resource.details}
           />
         ))}
       </main>

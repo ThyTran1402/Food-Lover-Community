@@ -4,7 +4,7 @@ function Header() {
   return (
     <header>
       <div className="header-banner"></div>
-      <h1>Food Lover Community</h1>
+      <h1>Software Engineering Learning Community</h1>
     </header>
   )
 }
